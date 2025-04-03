@@ -1,64 +1,64 @@
 ---
-title: Understanding Fragments in the xsre System
+title: Fragments core component
 identifier: xsre.design/101.core.fragment
 ---
 
 ## Abstract
-This document provides an overview of Fragments in the xsre system, detailing their characteristics and the Fragments defined in the xsre Baseline. It serves as a foundational reference for understanding how Fragments are utilized within the xsre architecture.
+This document provides a comprehensive overview of Fragments within the xsre system, outlining their characteristics and detailing the Fragments defined in the xsre Baseline. It serves as a foundational reference for understanding the role and utilization of Fragments in the xsre architecture.
 
-Refer to the [Appendix: Revisions](#appendix-revisions) for a summary of changes made to this document.
+Refer to the [Appendix: Revisions](#appendix-revisions) for a summary of updates to this document.
 
 ## Contents
 - [Introduction](#introduction)
-- [Characteristics of Fragments](#characteristics-of-fragments)
-- [xsre Baseline](#xsre-baseline)
-  - [buffer, array and string Fragments](#buffer-array-and-string-fragments)
+    - [Essential Characteristics](#essential-characteristics)
+        - [Storage, Retrieval, Modification, and Deletion](#storage-retrieval-modification-and-deletion)
+        - [Serialization and Deserialization](#serialization-and-deserialization)
+    - [Optional Characteristics](#optional-characteristics)
+- [Baseline](#baseline)
+    - [Fragments defined in the Baseline](#fragments-defined-in-the-baseline)
 
 # Introduction
 In the xsre system, a Fragment is a basic storage unit supported by the underlying storage solution. It is necessary to ensure that an Item can be represented as a series of such Fragments to facilitate storage and retrieval.
 
-The xsre system does not impose any restrictions on the definition of a Fragment as long as the Keeper can manage the Fragment.
+The xsre system imposes no strict constraints on the definition of a Fragment, provided that the Keeper can effectively manage it.
 
-# Characteristics of Fragments
+## Essential Characteristics
+Fragments in the xsre system exhibit the following essential characteristics:
 
-- Storage: Keeper must be able to store the Fragment in the underlying storage solution.
-- Retrieval: Keeper must be able to retrieve the Fragment from the underlying storage solution.
-- Modification: Keeper must be able to modify the Fragment in the underlying storage solution.
-- Deletion: Keeper must be able to delete the Fragment from the underlying storage solution.
+### Storage, Retrieval, Modification, and Deletion
+- Storage: The Keeper must be capable of storing the Fragment in the underlying storage solution.
+- Retrieval: The Keeper must be able to retrieve the Fragment from the storage solution.
+- Modification: The Keeper must support modifying the Fragment within the storage solution.
+- Deletion: The Keeper must facilitate the deletion of the Fragment from the storage solution.
 
-- Serialization: Keeper must be able to serialize the Item into the corresponding Fragments.
-- Deserialization: Keeper must be able to deserialize the Fragments into the corresponding Item.
+### Serialization and Deserialization
+- Serialization: The Keeper must enable the serialization of an Item into its corresponding Fragments.
+- Deserialization: The Keeper must support the deserialization of Fragments back into the corresponding Item.
 
-# xsre Baseline
-The xsre Baseline provides a set of guidelines for implementation of certain common useful interfaces and components. However, it does not mandate implementation of any such interfaces or components.
+## Optional Characteristics
+Fragments may also exhibit optional characteristics, which are not strictly required but can enhance functionality:
 
-The following Fragments are defined in the xsre Baseline:
+- Compression: The Keeper may support compressing the Fragment to optimize storage space.
+- Encryption: The Keeper may provide encryption capabilities for securing the Fragment during storage and retrieval.
+- Versioning: The Keeper may implement versioning for Fragments to track changes over time.
+- Metadata: The Keeper may allow the attachment of metadata to Fragments for additional context or information.
+- Indexing: The Keeper may support indexing of Fragments to improve retrieval performance.
 
-- xsre.design/101.baseline.fragment.ch
-- xsre.design/101.baseline.fragment.i8
-- xsre.design/101.baseline.fragment.i16
-- xsre.design/101.baseline.fragment.i32
-- xsre.design/101.baseline.fragment.i64
-- xsre.design/101.baseline.fragment.u8
-- xsre.design/101.baseline.fragment.u16
-- xsre.design/101.baseline.fragment.u32
-- xsre.design/101.baseline.fragment.u64
-- xsre.design/101.baseline.fragment.f32
-- xsre.design/101.baseline.fragment.f64
-- xsre.design/101.baseline.fragment.buffer
-- xsre.design/101.baseline.fragment.array
-- xsre.design/101.baseline.fragment.string
+# Baseline
+The xsre system does not impose any mandates on the implementation of core components or processes apart from the operational requirements of the system.
 
-## buffer, array and string Fragments
-Following distinction holds for the buffer, array and string Fragments:
+For general usability, Baseline provides a set of guidelines pertaining to the implementation of generic interfaces and components. Adherence to these guidelines is not mandatory.
 
-- buffer: A contiguous block of null-terminated data.
-- array: A contiguous block of length-prefixed data.
-- string: A buffer with a specific encoding.
+See the [xsre.design/101.baseline.readMe](../baseline/readMe.md) for a detailed overview of the Baseline.
 
-It is important to note that the xsre Baseline does not specify the unit for the size of the buffer, length-prefix or string encoding entries.
+## Fragments defined in the Baseline
+The following Fragments are defined in the Baseline:
+
+- NumericFragment: A specialized Fragment designed to handle numeric data types.
+
+See the [xsre.design/101.baseline.fragment](../baseline/fragment.md) for a detailed overview of the Fragments defined in the Baseline.
 
 # Appendix: Revisions
 
-## April 03, 2024: Preliminary incomplete public draft
-- Introduced the concept of Fragments in the xsre system.
+## April 04, 2024: Preliminary Incomplete Public Draft
+- Initial draft to outline the Fragments core component.
