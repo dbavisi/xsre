@@ -30,6 +30,8 @@ To manage the storage and retrieval of Items, the xsre system employs two key co
 # Fragments
 In the xsre system, a Fragment is a basic storage unit supported by the underlying storage solution. It is necessary to ensure that an Item can be represented as a series of such Fragments to facilitate storage and retrieval.
 
+Refer to the [xsre.design/101.core.fragment](./core/fragment.md) for a detailed understanding of Fragments.
+
 # Packets, Slicing and Scattering
 
 ## Packet
@@ -46,4 +48,5 @@ The Scattering process involves distributing the Packets across different storag
 # Appendix: Revisions
 
 ### April 03, 2024: Preliminary incomplete public draft
+- Add reference to xsre.design/101.core.fragment
 - Introducing key components and processes.
