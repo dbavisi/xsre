@@ -7,6 +7,7 @@
 **
 ** Design references:
 ** - xsre.design/101.baseline.fragment
+** - xsre.design/101.agnostic.spec
 */
 
 #ifndef xsre_baseline_fragment
