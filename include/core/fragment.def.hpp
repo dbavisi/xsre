@@ -13,7 +13,7 @@
 #define xsre_core_fragment_def
 
 namespace xsre::core::fragment {
-    template <typename T, bool Spec = false>
+    template <typename T, int Spec = 0>
     class Fragment {
     protected:
         T _fragment;
@@ -21,7 +21,7 @@ namespace xsre::core::fragment {
     public:
         Fragment(T fragment);                            // storage
         ~Fragment();                                     // deletion
-                           operator T();                 // retrieval
+                           operator T() const;           // retrieval
         Fragment<T, Spec>& operator=(const T& fragment); // modification
 
     }; // class xsre::core::fragment::Fragment

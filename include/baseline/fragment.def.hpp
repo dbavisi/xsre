@@ -6,7 +6,6 @@
 ** identifier: xsre.include/baseline.fragment.def
 **
 ** Design references:
-** - xsre.design/101.core.fragment
 ** - xsre.design/101.baseline.fragment
 */
 
@@ -18,12 +17,12 @@
 #include "include/core/fragment.def.hpp"
 
 namespace xsre::baseline::fragment {
-    template <typename T, bool Spec = false>
-    class NumericFragment : public core::fragment::Fragment<T, true> {
+    template <typename T, int Spec = 0>
+    class NumericFragment : public core::fragment::Fragment<T, 1> {
         static_assert(std::is_arithmetic<T>::value, "NumericFragment can only be used with arithmetic types");
 
     public:
-        using core::fragment::Fragment<T, true>::Fragment;
+        using core::fragment::Fragment<T, 1>::Fragment;
 
         NumericFragment<T, Spec> operator+(const NumericFragment<T, Spec>& other) const;
         NumericFragment<T, Spec> operator-(const NumericFragment<T, Spec>& other) const;

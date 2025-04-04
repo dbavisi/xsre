@@ -4,7 +4,7 @@ identifier: xsre.design/101.readMe
 ---
 
 ## Abstract
-This document outlines the initial design draft for the xsre system, introducing key concepts such as Items, Exhibits, Keepers, Finders, Fragments, and Packets, along with processes like Slicing and Scattering. These components and processes collectively build the foundation for xsre system.
+This document outlines the initial design draft for the xsre system, introducing the core components such as Items, Exhibits, Keepers, Finders, Fragments, and Packets, along with the processes like Slicing and Scattering, and the key concepts like Baseline and Agnostic patterns. These components, processes and concepts collectively build the foundation for the xsre system.
 
 Refer to the [Appendix: Revisions](#appendix-revisions) for a summary of updates to this document.
 
@@ -17,7 +17,10 @@ Refer to the [Appendix: Revisions](#appendix-revisions) for a summary of updates
         - [Packet](#packet)
         - [Slicing](#slicing)
         - [Scattering](#scattering)
-- [Baseline](#baseline)
+- [Baseline and Agnostic Patterns](#baseline-and-agnostic-patterns)
+    - [Baseline](#baseline)
+    - [Agnostic Patterns](#agnostic-patterns)
+- [Appendix: Revisions](#appendix-revisions)
 
 # Core Components and Processes
 
@@ -49,17 +52,21 @@ The objective of the Slicing process is to partition a larger Packet into smalle
 ### Scattering
 The Scattering process involves distributing the Packets across different storage targets. This is particularly useful for scalability and performance optimization.
 
-# Baseline
-The xsre system does not impose any mandates on the implementation of core components or processes apart from the operational requirements of the system.
+# Baseline and Agnostic Patterns
+The xsre system does not impose any mandates on the implementation of core components or processes, apart from the operational requirements of the system.
 
+## Baseline
 For general usability, Baseline provides a set of guidelines pertaining to the implementation of generic interfaces and components. Adherence to these guidelines is not mandatory.
 
-See the [xsre.design/101.baseline.readMe](./baseline/readMe.md) for a detailed overview of the Baseline.
+Refer to the [xsre.design/101.baseline.readMe](./baseline/readMe.md) for an overview of the concept and guidelines of the Baseline.
+
+## Agnostic Patterns
+The Agnostic patterns, on the other hand, are a set of design patterns intended to be used in conjunction with the Baseline. These patterns facilitate the implementation of Baseline-compliant components and processes.
 
 # Appendix: Revisions
 
-### April 04, 2025: Fragments, Baseline, NumericFragment
-- Introducing Fragments and Baseline.
+### April 05, 2025: Components, Processes and Concepts
+- Refined the structure of the document, introducing sections for core components, processes, and concepts.
 
 ### April 03, 2025: Preliminary incomplete public draft
 - Introducing key components and processes.

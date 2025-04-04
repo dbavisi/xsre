@@ -2,11 +2,10 @@
 ** xsre
 ** Experimental Storage and Retrieval Engine
 **
-** Fragment baseline component interfaces and definitions.
+** Fragment Baseline component interfaces and definitions.
 ** identifier: xsre.include/baseline.fragment
 **
 ** Design references:
-** - xsre.design/101.core.fragment
 ** - xsre.design/101.baseline.fragment
 */
 
@@ -18,22 +17,22 @@
 #include "include/baseline/fragment.def.hpp"
 
 namespace xsre::baseline::fragment {
-    template <typename T, bool Spec>
+    template <typename T, int Spec>
     NumericFragment<T, Spec> NumericFragment<T, Spec>::operator+(const NumericFragment<T, Spec>& other) const {
         return NumericFragment<T, Spec>(this->_fragment + other._fragment);
     };
 
-    template <typename T, bool Spec>
+    template <typename T, int Spec>
     NumericFragment<T, Spec> NumericFragment<T, Spec>::operator-(const NumericFragment<T, Spec>& other) const {
         return NumericFragment<T, Spec>(this->_fragment - other._fragment);
     };
 
-    template <typename T, bool Spec>
+    template <typename T, int Spec>
     NumericFragment<T, Spec> NumericFragment<T, Spec>::operator*(const NumericFragment<T, Spec>& other) const {
         return NumericFragment<T, Spec>(this->_fragment * other._fragment);
     };
 
-    template <typename T, bool Spec>
+    template <typename T, int Spec>
     NumericFragment<T, Spec> NumericFragment<T, Spec>::operator/(const NumericFragment<T, Spec>& other) const {
         return NumericFragment<T, Spec>(this->_fragment / other._fragment);
     };

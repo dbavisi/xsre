@@ -15,18 +15,18 @@
 #include "include/core/fragment.def.hpp"
 
 namespace xsre::core::fragment {
-    template <typename T, bool Spec>
+    template <typename T, int Spec>
     Fragment<T, Spec>::Fragment(T fragment) : _fragment(fragment) {}
 
-    template <typename T, bool Spec>
+    template <typename T, int Spec>
     Fragment<T, Spec>::~Fragment() = default;
 
-    template <typename T, bool Spec>
-    Fragment<T, Spec>::operator T() {
+    template <typename T, int Spec>
+    Fragment<T, Spec>::operator T() const {
         return _fragment;
     };
 
-    template <typename T, bool Spec>
+    template <typename T, int Spec>
     Fragment<T, Spec>& Fragment<T, Spec>::operator=(const T& fragment) {
         _fragment = fragment;
         return *this;
