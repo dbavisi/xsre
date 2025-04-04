@@ -38,5 +38,5 @@ The Baseline also outlines optional enhancements that can improve functionality 
 
 # Appendix: Revisions
 
-### April 04, 2024: Preliminary Incomplete Public Draft
+### April 04, 2025: Preliminary Incomplete Public Draft
 - Introduced the purpose and guidelines of the Baseline.

@@ -60,5 +60,5 @@ See the [xsre.design/101.baseline.fragment](../baseline/fragment.md) for a detai
 
 # Appendix: Revisions
 
-## April 04, 2024: Preliminary Incomplete Public Draft
+## April 04, 2025: Preliminary Incomplete Public Draft
 - Initial draft to outline the Fragments core component.

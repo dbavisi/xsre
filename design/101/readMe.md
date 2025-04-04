@@ -58,8 +58,8 @@ See the [xsre.design/101.baseline.readMe](./baseline/readMe.md) for a detailed o
 
 # Appendix: Revisions
 
-### April 04, 2024: Fragments, Baseline, NumericFragment
+### April 04, 2025: Fragments, Baseline, NumericFragment
 - Introducing Fragments and Baseline.
 
-### April 03, 2024: Preliminary incomplete public draft
+### April 03, 2025: Preliminary incomplete public draft
 - Introducing key components and processes.
